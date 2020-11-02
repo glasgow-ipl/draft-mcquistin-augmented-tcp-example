@@ -331,7 +331,7 @@
                          </dt>
                          <dd>
                              <t>
-                                 Option kind.
+                                This option code indicates the end of the option list.
                              </t>
                          </dd>
                      </dl>
@@ -354,7 +354,8 @@
                          </dt>
                          <dd>
                              <t>
-                                 Option kind.
+                                This option code can be used between options, for example, to
+                                align the beginning of a subsequent option on a word boundary.
                              </t>
                          </dd>
                      </dl>
@@ -377,7 +378,8 @@
                          </dt>
                          <dd>
                              <t>
-                                 Option kind.
+                                If this option is present, then it communicates the maximum
+                                receive segment size at the TCP endpoint that sends this segment.
                              </t>
                          </dd>
                          <dt>
@@ -393,7 +395,7 @@
                          </dt>
                          <dd>
                              <t>
-                                 MSS.
+                                The maximum segment size allowed.
                              </t>
                          </dd>
                      </dl>
@@ -416,7 +418,7 @@
                          </dt>
                          <dd>
                              <t>
-                                 Option kind.
+                                If present, this option carries the window scale factor.
                              </t>
                          </dd>
                          <dt>
@@ -459,7 +461,7 @@
                          </dt>
                          <dd>
                              <t>
-                                 Option kind.
+                                If present, this option carries a timestamp and an echoed timestamp.
                              </t>
                          </dd>
                          <dt>
@@ -506,7 +508,7 @@
                          </dt>
                          <dd>
                              <t>
-                                 Option kind.
+                                If present, this option indicates that SACK is permitted.
                              </t>
                          </dd>
                          <dt>
