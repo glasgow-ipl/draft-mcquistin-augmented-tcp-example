@@ -532,6 +532,42 @@
                 target="draft-ietf-tcpm-rfc793bis" />. We have adopted the same field
                 descriptions to help with this comparison.
              </t>
+            <t>
+                Beyond the broad similarities, there are a number of elements where this
+                document describes the protocol differently. For example, the TCP header
+                as defined in <xref target="draft-ietf-tcpm-rfc793bis" /> contains a
+                variable-length padding field which is not present in the description contained
+                in this document. The Padding field is used to pad the TCP header to a 32-bit
+                boundary, and to ensure that the Payload begins on a 32-bit boundary. The length of
+                the Padding field is the difference between the value of the Data Offset field and
+                the length of the Options field. However, the length of the Options field is itself
+                dependent on the value of the Data Offset field and the particular set of options
+                contained within an instance of the TCP header. The Augmented Packet Header Diagram
+                format cannot express this logic: the lengths of both the Padding and Payload fields
+                would be variable. To overcome this, as shown in <xref target="tcpheader" />, the
+                description of TCP given in this document relies upon End of List options being
+                syntactically identical to Padding (i.e., being all zeroes). This highlights the
+                limitations of the Augmented Packet Header Diagram format: prose text is much more
+                expressive.
+            </t>
+            <t>
+                However, the precision required by the Augmented Packet Header Diagram can be
+                beneficial. For example, the description of the Options field in this document
+                sets out an explicit length and presence constraint, where <xref target="draft-ietf-tcpm-rfc793bis" />
+                indicates that it is "variable". Similar constraints exist in the description given in
+                <xref target="draft-ietf-tcpm-rfc793bis" />, but they are contained with the prose description of
+                the field.
+            </t>
+            <t>
+               In summary, the most striking comparison to be made is that the description of TCP given
+               in this document is largely similar to that given in <xref
+               target="draft-ietf-tcpm-rfc793bis" />. By retaining the overall structure of a
+               packet header diagram and an accommpanying list of descriptions for each field,
+               the Augmented Packet Header Diagram format is close to that already in use. This
+               is encouraging: it indicates that the Augmented Packet Header Diagram language
+               can be used to describe realistic protocols, without introducing a format that
+               is unfamiliar or difficult to write.
+           </t>
      </section>
 
      <section anchor='IANA'>
