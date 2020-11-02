@@ -116,7 +116,7 @@
                  </t>
                  <dl>
                      <dt>
-                         Source Port: 16 bits
+                         Source Port: 16 bits.
                      </dt>
                      <dd>
                          <t>
@@ -124,7 +124,7 @@
                          </t>
                      </dd>
                      <dt>
-                         Destination Port: 16 bits
+                         Destination Port: 16 bits.
                      </dt>
                      <dd>
                          <t>
