@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='US-ASCII'?>
-<rfc version='3' ipr='trust200902' submissionType='IETF' docName='draft-mcquistin-augmented-tcp-example-00' category='exp'>
+<rfc version='3' ipr='trust200902' submissionType='IETF' docName='draft-mcquistin-augmented-tcp-example-01' category='exp'>
  <front>
      <title abbrev='TCP APHD Example'>
          Describing TCP with Augmented Packet Header Diagrams
      </title>
-     <seriesInfo name='Internet-Draft' value='drdraft-mcquistin-augmented-tcp-example-00' status="experimental" />
+     <seriesInfo name='Internet-Draft' value='drdraft-mcquistin-augmented-tcp-example-01' status="experimental" />
 
      <author fullname='Stephen McQuistin' initials='S.' surname='McQuistin'>
          <organization>University of Glasgow</organization>
@@ -58,7 +58,7 @@
          </address>
      </author>
 
-     <?date year='2020' month='October' day='12'/?>
+     <?date year='2020' month='December' day='15'/?>
 
      <abstract>
          <t>
