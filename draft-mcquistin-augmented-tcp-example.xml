@@ -310,14 +310,14 @@
              <section anchor="tcpoptions">
                  <name>TCP Options</name>
                      <t>
-                         A TCP Option is one of: a EOL Option, a NOOP Option, a Maximum Segment Size Option, a Window Scale Factor Option, a Timestamp Option, or a SACK Permitted Option.
+                         A TCP Option is one of: a EOL Option, a NOOP Option, a Maximum Segment Size Option, a Window Scale Factor Option, a Timestamp Option, a SACK Permitted Option, or a SACK Range Option.
                      </t>
                      <t>
                       An EOL Option is formatted as follows:
                      </t>
                      <artwork>
- 0               
- 0 1 2 3 4 5 6 7 
+ 0
+ 0 1 2 3 4 5 6 7
 +-+-+-+-+-+-+-+-+
 |       0       |
 +-+-+-+-+-+-+-+-+
@@ -339,8 +339,8 @@
                       A NOOP Option is formatted as follows:
                      </t>
                      <artwork>
- 0               
- 0 1 2 3 4 5 6 7 
+ 0
+ 0 1 2 3 4 5 6 7
 +-+-+-+-+-+-+-+-+
 |       1       |
 +-+-+-+-+-+-+-+-+
@@ -493,8 +493,8 @@
                       A SACK Permitted Option is formatted as follows:
                      </t>
                      <artwork>
- 0                   1          
- 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 
+ 0                   1
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |       4       |     Length    |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -517,6 +517,81 @@
                          <dd>
                              <t>
                                  Option length.
+                             </t>
+                         </dd>
+                     </dl>
+                     <t>
+                      A SACK Range Option is formatted as follows:
+                     </t>
+                     <artwork>
+ 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|       5       |     Length    |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                            [Blocks]                           |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+                     </artwork>
+                     <t>
+                         where:
+                     </t>
+                     <dl>
+                         <dt>
+                             Option Kind (Kind): 1 byte; Kind == 5.
+                         </dt>
+                         <dd>
+                             <t>
+                                If present, this option contains one or more SACK blocks.
+                             </t>
+                         </dd>
+                         <dt>
+                             Option Length (Length): 1 byte; Length == 2.
+                         </dt>
+                         <dd>
+                             <t>
+                                 Option length.
+                             </t>
+                         </dd>
+                         <dt>
+                            Blocks: (Length-2)/8 SACK Blocks.
+                         </dt>
+                         <dd>
+                             <t>
+                                 SACK blocks.
+                             </t>
+                         </dd>
+                     </dl>
+                     <t>
+                      A SACK Block is formatted as follows:
+                     </t>
+                     <artwork>
+ 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                           Left Edge                           |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                          Right Edge                           |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+                     </artwork>
+                     <t>
+                         where:
+                     </t>
+                     <dl>
+                         <dt>
+                             Left Edge: 4 bytes.
+                         </dt>
+                         <dd>
+                             <t>
+                                This is the first sequence number of this block.
+                             </t>
+                         </dd>
+                         <dt>
+                             Right Edge: 4 bytes.
+                         </dt>
+                         <dd>
+                             <t>
+                               This is the sequence number immediately following the last
+      sequence number of this block.
                              </t>
                          </dd>
                      </dl>
