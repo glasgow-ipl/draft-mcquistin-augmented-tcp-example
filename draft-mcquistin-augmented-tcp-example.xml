@@ -645,7 +645,7 @@
  <back>
      <references>
          <name>Informative References</name>
-         <reference anchor="AUGMENTED-DIAGRAMS" target="http://www.ietf.org/internet-drafts/draft-mcquistin-augmented-ascii-diagrams-08.txt">
+         <reference anchor="AUGMENTED-DIAGRAMS" target="http://www.ietf.org/internet-drafts/draft-mcquistin-augmented-ascii-diagrams-09.txt">
              <front>
                  <title>Describing Protocol Data Units with Augmented Packet Header Diagrams</title>
 
@@ -654,10 +654,10 @@
                  <author initials='D' surname='Jacob' fullname='Dejice Jacob'><organization /></author>
                  <author initials='C. S.' surname='Perkins' fullname='Colin Perkins'><organization /></author>
 
-                 <date month='May' day='5' year='2021' />
+                 <date month='October' day='25' year='2021' />
              </front>
 
-             <seriesInfo name='Internet-Draft' value='draft-mcquistin-augmented-ascii-diagrams-08' />
+             <seriesInfo name='Internet-Draft' value='draft-mcquistin-augmented-ascii-diagrams-09' />
          </reference>
          <reference anchor="RFC793" target="https://www.rfc-editor.org/info/rfc793">
              <front>
@@ -669,16 +669,16 @@
              </front>
              <seriesInfo name='RFC' value='793'/>
          </reference>
-         <reference anchor="draft-ietf-tcpm-rfc793bis" target="http://www.ietf.org/internet-drafts/draft-ietf-tcpm-rfc793bis-21.txt">
+         <reference anchor="draft-ietf-tcpm-rfc793bis" target="http://www.ietf.org/internet-drafts/draft-ietf-tcpm-rfc793bis-25.txt">
              <front>
                  <title>Transmission Control Protocol (TCP) Specification</title>
 
                  <author initials='W' surname='Eddy' fullname='Wesley Eddy'><organization /></author>
 
-                 <date month='May' day='3' year='2021' />
+                 <date month='September' day='7' year='2021' />
              </front>
 
-             <seriesInfo name='Internet-Draft' value='draft-ietf-tcpm-rfc793bis-21' />
+             <seriesInfo name='Internet-Draft' value='draft-ietf-tcpm-rfc793bis-25' />
          </reference>
      </references>
 
